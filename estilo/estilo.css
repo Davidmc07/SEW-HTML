@@ -1,0 +1,124 @@
+/************
+David Martínez Castañón - UO282048
+Estilos de la página.
+
+Se incluyen todos los atributos que cambien la apariencia de los fondos y del texto.
+************/
+
+@media screen and (max-width: 43.65em) {
+    /*001*/
+    body {
+      font-size: 2vw;
+    }
+}
+
+/*001*/
+body {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*001*/
+header {
+    background-color: #EB0000;
+    color: black;
+    border-radius: 1em;
+}
+/*001*/
+nav {
+    border-radius: 1em; 
+}
+/*001*/
+main {  
+    font-size: 1.2em;
+}
+/*001*/
+footer {
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 20, 20);
+}
+/*001*/
+video {
+    border: 0.3em solid rgb(43, 43, 43);
+}
+/*001*/
+pre, code {
+    background-color:#d0d0d0;
+    color: black;
+}
+/*001*/
+code {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.85em;
+}
+
+/*002*/
+main > section {
+    color: black;
+    background-color:rgb(222, 222, 222);
+    border-radius: 1em;
+}
+/*002*/
+nav > a {
+    color: black;
+    background-color:rgb(255, 183, 0);
+    font-size: 1.25em;
+    text-decoration: none;
+}
+/*002*/
+section a {
+    color: #0000ed; /* background-color:rgb(222, 222, 222) heredado de main > section */
+    text-decoration: none;
+}
+/*002*/
+footer a {
+    color: #ff8300; /* background-color: rgb(20, 20, 20) heredado de footer */
+}
+/*002*/
+table caption {
+    background-color: rgb(7, 0, 104);
+    color:white;
+    border: 0.2em solid black;
+}
+/*002*/
+table th {
+    background-color: rgb(97, 216, 255); /* color:black heredado de main > section */
+    border: 0.2em solid black;
+} 
+/*002*/
+table td {
+    background-color: white; /* color:black heredado de main > section */
+    border: 0.2em solid black;
+}
+
+/*003*/
+main > section > h2 {
+    background-color: #4a4a4a;
+    color: white;
+    border-radius: 0.5em;
+}
+/*003*/
+main > section > h3 {
+    text-decoration: underline;
+}
+
+
+/*012*/
+nav > a:first-of-type {
+    border-top-left-radius: 0.85em;
+    border-bottom-left-radius: 0.85em;
+}
+/*012*/
+nav > a:last-of-type {
+    border-top-right-radius: 0.85em;
+    border-bottom-right-radius: 0.85em;
+}
+/*012*/
+nav > a:hover {
+    background-color: #CC9200; /* color:black heredado de nav > a*/
+    text-decoration:underline;
+}
+/*013*/
+nav > a:not(a:first-of-type) {
+    border-left: 0.25em solid rgb(24, 24, 24);
+}

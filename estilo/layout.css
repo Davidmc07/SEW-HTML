@@ -1,0 +1,130 @@
+/************
+David Martínez Castañón - UO282048
+Layout de la página.
+
+Se incluyen:
+-Displays de cada elemento
+-Márgenes y padding
+-Tamaño de los elementos
+-Atributos para centrar el contenido
+************/
+
+@media screen and (max-width: 43.65em) {
+    /*001*/
+    main {
+      min-width: 90%;
+    }
+}
+
+/*001*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+/*001*/
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+/*001*/
+nav {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+/*001*/
+main {
+    width: 60%;
+    align-self: center;
+}
+/*001*/
+footer {
+    margin-top: 3em;
+    padding: 1em 2em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+/*002*/
+header > h1 {
+    align-self: center;
+    margin-left: 1em;
+}
+header > picture {
+    align-self: center;
+}
+/*002*/
+nav > a {
+    padding: 1em;
+    text-align: center;
+}
+/*002*/
+main > section {
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+/*002*/
+footer > address {
+    margin-bottom: 2em;
+}
+/*002*/
+footer > img {
+    max-width: 15%;
+}
+/*002, 003*/
+footer > img, footer > img ~ p {
+    align-self: center;
+}
+
+/*SECCIONES*/
+/*003*/
+main > section > *:not(h2, video, table) {
+    margin-left: 2em;
+    margin-right: 1em;
+}
+/*003*/
+main > section > h2 {
+    padding: 0.75em 2em;
+    margin: 0.5em;
+    align-self:stretch;
+}
+/*003*/
+main > section > h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+/*003*/
+main > section > pre {
+    overflow-x: auto;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding-left: 1em;
+}
+/*003*/
+main > section > video {
+    margin-top: 4em;
+    align-self: center;
+    width: 80%;
+    height: auto;
+}
+/*003*/
+main > section > table {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    align-self: center;
+    width: 50%;
+}
+/*003*/
+main > section > audio {
+    margin-top: 2em;
+}
+
+/*004*/
+main > section > table caption,
+main > section > table th,
+main > section > table td {
+    padding: 0.5em;
+}

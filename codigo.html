@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="David Martínez Castañón" />
+    <meta name ="description" content ="Código en rust" />
+    <meta name ="keywords" content ="rust,programación,lenguaje,coding,sintaxis,código" />
+
+    <!--Definición de la ventana gráfica-->
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <title>Lenguaje Rust: Código</title>
+    <!-- link de enlace a la hoja de estilo -->
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="icon" type="image/png" href="multimedia/rust_icon.png">
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>
+        <picture>
+            <source media="(min-width:700px)" srcset="multimedia/rust_logo.png" />
+            <source media="(max-width:699px)" srcset="multimedia/rust_logo_small.png" />
+            <img src="multimedia/rust_logo.png" alt="logo de rust">
+        </picture>
+        <h1>Lenguaje Rust</h1>
+    </header>
+    <nav>
+        <a href="index.html" accesskey="i" tabindex="1">Inicio</a>
+        <a href="descripcion.html" accesskey="r" tabindex="2">Descripción</a>
+        <a href="codigo.html" accesskey="c" tabindex="3">Código</a>
+        <a href="fundacion-rust.html" accesskey="u" tabindex="4">Fundación Rust</a>
+        <a href="preguntas.html" accesskey="p" tabindex="5">Preguntas</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Código</h2>
+            <p>A continuación se muestran varios ejemplos de código escrito en rust mediante los cuales es posible hacerse una idea de la apariencia y el funcionamiento de este lenguaje de programación.</p>
+            
+            <h3>Hola mundo</h3>
+            <!--Se añaden comentarios como indentación para que el html sea más legible-->
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    println!("¡Hola, mundo!");
+<!--         -->}
+            </code></pre>
+
+            <h3>Declaración de variables</h3>
+            <p>Las variables en rust son inmutables por defecto. Para poder modificarlas deberemos añadir <code>mut</code> en su declaración.</p>
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    let inmutable = 5;   // variable inmutable
+<!--         -->    let mut mutable = 5; // variable mutable
+<!--         -->}
+            </code></pre>
+
+            <h3>Entrada de datos</h3>
+            <p>Para leer datos del usuario necesitamos la biblioteca io, por lo que deberemos añadir <code>use std::io</code> al principio de nuestro código.</p>
+            <pre><code>
+<!--         -->use std::io;
+
+<!--         -->fn main() {
+<!--         -->    let mut str = String::new();
+
+<!--         -->    println!("Escribe una línea");
+
+<!--         -->    io::stdin().read_line(&mut str)
+<!--         -->        .ok()
+<!--         -->        .expect("Fallo al leer linea");
+                
+<!--         -->    println!("Has escrito '{}'", str);
+<!--         -->}
+            </code></pre>
+
+            <h3>Condicionales</h3>
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    let n = 5;
+
+<!--         -->    if x &lt; 0 {
+<!--         -->        println!("x es negativo");
+<!--         -->    } else if x == 0 {
+<!--         -->        println!("x es cero");
+<!--         -->    } else {
+<!--         -->        println!("x es positivo");
+<!--         -->    }
+<!--         -->}
+            </code></pre>
+
+            <h3>Ciclos</h3>
+            <p>En rust, al igual que en otros lenguajes de programavión, tenemos ciclos for, for each y while.</p>
+            <h4>Ciclos for</h4>
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    for i in 0..10 {
+<!--         -->        println!("Iteración número {}", i);
+<!--         -->    }
+<!--         -->}
+            </code></pre>
+            <h4>Ciclos for each</h4>
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    let mut my_arr: Vec&lt;String&gt; = Vec::new();
+                
+<!--         -->    my_arr.push("String1".to_string());
+<!--         -->    my_arr.push("String2".to_string());
+<!--         -->    my_arr.push("String3".to_string());
+                
+<!--         -->    for word in my_arr {
+<!--         -->        println!("{}", word);
+<!--         -->    }
+<!--         -->}
+            </code></pre>
+            <h4>Ciclos while</h4>
+            <pre><code>
+<!--         -->fn main() {
+<!--         -->    let mut n = 0;
+<!--         -->    while n &lt; 11 {
+<!--         -->        println!("Iteración número {}", i);
+<!--         -->        n += 1;
+<!--         -->    }
+<!--         -->}
+            </code></pre>
+
+        </section>
+    </main>
+    <footer>
+        <h2>Contáctanos</h2>
+            <address>
+                David Martínez Castañón: <a href="mailto:UO282048@uniovi.es">UO282048@uniovi.es</a>
+            </address> 
+        <img src="multimedia/footer_image.png" alt="Mascota de la comunidad rust">
+        <p>Únete a la comunidad Rust</p>
+    </footer>
+     
+</body>
+</html>

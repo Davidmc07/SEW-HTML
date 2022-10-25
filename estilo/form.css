@@ -1,0 +1,46 @@
+/************
+David Martínez Castañón - UO282048
+Estilo del formulario.
+
+Alinear el comienzo de los campos de texto y aplicar estilo al botón de enviar.
+************/
+
+
+/*004*/
+main > section > form > fieldset {
+    width: 80%;
+    margin-top: 1em;
+}
+/*011*/
+input[type="submit"] {
+    width: 5em;
+    padding: 0.2em 0em;
+    margin-top: 2em;
+
+    background-color: green;
+    color: white;
+    border-radius: 1em;
+    font-size: 1.2em;
+}
+/*015*/
+main > section > form > fieldset:first-of-type > p {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+/*015*/
+main > section > form > fieldset:first-of-type label {
+    grid-column: 1;
+}
+/*015*/
+main > section > form > fieldset:first-of-type textarea {
+    grid-column: 2;
+    resize: vertical;
+}
+/*016*/
+main > section > form > fieldset:first-of-type label + input {
+    grid-column: 2;
+}
+/*021*/
+input[type="submit"]:hover{
+    background-color: rgb(0, 73, 0); /* color:white heredado de input[type="submit"] */
+}
